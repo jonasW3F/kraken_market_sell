@@ -96,6 +96,9 @@ sell = makeRequest('/0/private/AddOrder', {
 
 tx_id = sell.json()['result']['txid'][0]
 
+# To give Kraken backend time
+sleep(1)
+
 trade = makeRequest('/0/private/QueryOrders', {
     "nonce": str(int(1000*time.time())),
     "txid": tx_id,
