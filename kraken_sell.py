@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 
 import time
+from time import sleep 
 import os
 import requests
 import urllib.parse
@@ -93,4 +94,16 @@ sell = makeRequest('/0/private/AddOrder', {
     "pair": pair,
 }, api_key, api_sec)
 
-print(sell.json())
+tx_id = sell.json()['result']['txid'][0]
+
+trade = makeRequest('/0/private/QueryOrders', {
+    "nonce": str(int(1000*time.time())),
+    "txid": tx_id,
+    "trades": False
+}, api_key, api_sec)
+
+profit = trade.json()['result'][tx_id]['cost']
+fee = trade.json()['result'][tx_id]['fee']
+price = trade.json()['result'][tx_id]['price']
+
+print('Your trade was successful. You sold at ' + price + ' ' + fiat + ' and had a profit of ' + profit + ' ' + fiat + '. You paid ' + fee + ' ' + fiat +  ' in fees.')
