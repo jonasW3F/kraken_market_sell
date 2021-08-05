@@ -1,7 +1,7 @@
 # Kraken (Market)Sell Script
 
 ## Disclaimer
-By using this script, you give it access to your Binance account. I do not take any responsibility of bugs which could cause loss of funds.
+By using this script, you give it access to your Kraken account. I do not take any responsibility of bugs which could cause loss of funds.
 
 ## What it does
 
