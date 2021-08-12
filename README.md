@@ -12,7 +12,6 @@ This simple script will sell a user-specified amount of DOT tokens for EUR as a 
 ### Set your API keys as environmental variables
 * Get your Kraken API keys.
 * Set your API keys as environmental variables. Use `API_KEY_KRAKEN` for your public key and `API_SEC_KRAKEN` for your secret key.
-* Install the krakenex python library with `pip install python-krakenex`.
 
 ## Running
 Open the folder containing the script with your terminal and type:
