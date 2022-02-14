@@ -57,8 +57,8 @@ balances = makeRequest('/0/private/Balance', {
 dot_balance = float(balances.json()['result']['DOT'])
 ksm_balance = float(balances.json()['result']['KSM'])
 
-print('KSM is currently trading at ' + str(ksm_price) + '.' + ' You currently have ' + str(ksm_balance) + ' available')
-print('DOT is currently trading at ' + str(dot_price) + '.' + ' You currently have ' + str(dot_balance) + ' available')
+print('1) KSM is currently trading at ' + str(ksm_price) + '.' + ' You currently have ' + str(ksm_balance) + ' available')
+print('2) DOT is currently trading at ' + str(dot_price) + '.' + ' You currently have ' + str(dot_balance) + ' available')
 
 
 while True:
